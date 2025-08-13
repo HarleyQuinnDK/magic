@@ -18,7 +18,22 @@
     <title>Thajské masáže Uherské Hradiště</title>
 </head>
 <body>
-
+	<script>
+(function(){
+  const css=`#dkMagicOverlay{position:fixed;inset:0;background:radial-gradient(80% 60% at 50% 40%,rgba(255,255,255,.15),rgba(0,0,0,.85) 60%),#000;backdrop-filter:blur(2px);display:flex;align-items:center;justify-content:center;z-index:2147483647}#dkMagicPortal{position:relative;width:min(88vw,680px);height:min(60vh,420px);border-radius:24px;background:conic-gradient(from 0deg at 50% 50%,#8cf,#a6f,#8cf);filter:blur(.2px) saturate(1.2);box-shadow:0 0 40px rgba(160,140,255,.5),inset 0 0 80px rgba(255,255,255,.2);animation:spin 5s linear infinite}#dkMagicText{position:absolute;inset:auto 0 10%;text-align:center;font:700 clamp(24px,6vw,48px)/1.1 system-ui,Segoe UI,Roboto,Arial;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.6)}.spark{position:absolute;top:-10vh;width:8px;height:12px;opacity:.9;animation:fall linear forwards}.conf{position:absolute;top:-6vh;width:10px;height:14px;opacity:.95;transform:rotate(15deg);animation:drop linear forwards}@keyframes spin{to{transform:rotate(1turn)}}@keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}@keyframes drop{to{transform:translateY(108vh) rotate(720deg)}}`;
+  const s=document.createElement('style');s.textContent=css;
+  const o=document.createElement('div');o.id='dkMagicOverlay';
+  const p=document.createElement('div');p.id='dkMagicPortal';
+  const t=document.createElement('div');t.id='dkMagicText';t.textContent='Abrakadabra, Kubíku ✨';
+  o.appendChild(p);o.appendChild(t);
+  document.body.appendChild(s);document.body.appendChild(o);
+  const rnd=n=>Math.random()*n;
+  for(let i=0;i<36;i++){const e=document.createElement('div');e.className='spark';e.style.left=(rnd(100))+'vw';e.style.background='linear-gradient(#fff,#9cf)';e.style.borderRadius='6px';e.style.animationDuration=(4+rnd(2))+'s';e.style.animationDelay=(rnd(1))+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),7000)}
+  const colors=['#ff6b6b','#ffd93d','#6bcB77','#4d96ff','#b892ff'];
+  for(let i=0;i<60;i++){const c=document.createElement('div');c.className='conf';c.style.left=(rnd(100))+'vw';c.style.background=colors[i%colors.length];c.style.borderRadius='2px';c.style.animationDuration=(3.5+rnd(2))+'s';c.style.animationDelay=(rnd(1))+'s';document.body.appendChild(c);setTimeout(()=>c.remove(),7000)}
+  setTimeout(()=>{o.remove();s.remove()},6000);
+})();
+</script>
     <div class="header-hp">
         <header>
             <div class="inner-wrapper clearfix">
